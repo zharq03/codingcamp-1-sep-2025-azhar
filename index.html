@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List - AZHAR</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gradient-to-br from-green-400 to-blue-500 text-white flex items-center justify-center min-h-screen">
+    <div class="text-center mb-4">
+        <div id="clock" class="text-2xl font-bold text-white"></div>
+        <div id="date" class="text-lg text-white"></div>
+    </div>
+    <div class="bg-white p-4 rounded-lg shadow-xl w-full max-w-md mx-4 text-gray-800">
+        <h1 class="text-2xl font-bold text-center mb-4 text-green-600">Azhar Task Manager</h1>
+
+        <div class="mb-4">
+            <form class="flex flex-col sm:flex-row items-center">
+                <input type="text" id="todo-input" placeholder="Add a new task..."
+                    class="flex-1 p-2 bg-green-100 border-b-2 border-green-400 text-gray-800 focus:outline-none w-full sm:w-auto">
+                <input type="date" id="todo-date-input"
+                    class="p-2 bg-green-100 border-b-2 border-green-400 text-gray-800 focus:outline-none w-full sm:w-auto">
+                <button type="button" onclick="validateInput();"
+                    class="bg-green-500 text-white px-3 py-2 rounded w-full sm:w-auto hover:bg-green-600">Add</button>
+            </form>
+        </div>
+
+        <div class="flex flex-col sm:flex-row justify-between mb-4 gap-2">
+            <select id="filter-select" onchange="filterTodo()"
+                class="bg-blue-100 text-gray-800 p-2 rounded w-full sm:w-auto border border-blue-400">
+                <option value="all">All</option>
+                <option value="pending">Pending</option>
+                <option value="active">Active</option>
+                <option value="done">Done</option>
+            </select>
+            <button class="bg-red-500 text-white px-4 py-2 rounded w-full sm:w-auto hover:bg-red-600"
+                onclick="deleteAllTodo();">Delete All</button>
+        </div>
+
+        <div class="bg-blue-100 p-4 rounded">
+            <div class="flex justify-between text-gray-700 text-sm mb-2 font-semibold">
+                <span>Task</span>
+                <span>Due Date</span>
+                <span>Status</span>
+                <span>Actions</span>
+            </div>
+            <ul id="todo-list" class="text-center">
+                <li class="text-gray-500">No tasks found</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
