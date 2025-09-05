@@ -1,0 +1,55 @@
+body {
+    height: 100vh;
+    background-color: #0f687b;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+input, select {
+    border: none;
+    background: transparent;
+}
+
+input:focus, select:focus {
+    outline: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+.bg-gray-800 {
+    background-color: #2258b4;
+}
+
+.bg-gray-700 {
+    background-color: #255ec0;
+}
+
+.text-gray-400 {
+    color: #cbd5e0;
+}
+
+.text-gray-500 {
+    color: #a0aec0;
+}
+
+@media (max-width: 640px) {
+    .flex-col {
+        flex-direction: column;
+    }
+    .gap-2 {
+        gap: 0.5rem;
+    }
+    input, button, select {
+        width: 100%;
+    }
+}
+
+@media (min-width: 641px) {
+}
